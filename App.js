@@ -1,4 +1,5 @@
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const root2 = ReactDOM.createRoot(document.getElementById("root2"));
 // Nested structure without JSX - The core of react
 
 // To do
@@ -47,4 +48,4 @@ const element2 = React.createElement("div", { id: "parent" }, [
   ]),
 ]); // give siblings in an array
 
-root.render(element2);
+root2.render(element2);
