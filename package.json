@@ -1,0 +1,17 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "A deep react cource",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Faith Sabu",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
