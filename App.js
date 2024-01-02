@@ -1,5 +1,9 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const root2 = ReactDOM.createRoot(document.getElementById("root2"));
+
 // Nested structure without JSX - The core of react
 
 // To do
