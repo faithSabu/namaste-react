@@ -1,55 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-const root2 = ReactDOM.createRoot(document.getElementById("root2"));
-
-// Nested structure without JSX - The core of react
-
-// To do
-{
-  /* <div id="parent">
-  <div id="child">
-    <h1>I'm an h1 tag</h1>
-  </div>
-</div> */
-}
-
-const element = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h1", {}, "I'm an h1 tag")
-  )
+// eg. of core react
+const headingInCoreReact = React.createElement(
+  "h1",
+  { id: "heading" },
+  "Welcome from core react"
 );
 
-root.render(element);
+// use of JSX - the same element in JSX
+const headingInJSX = <h1 id="heading">Welcome from JSX</h1>; // this code will be converted to React.createElement(core of react) by Babel
 
-// To Do
-{
-  /* <div id="parent">
-  <div id="child1">
-    <h1>I'm an h1 tag</h1>
-    <h2>I'm an h2 tag</h2>
-  </div>
-  <div id="child2">
-    <h1>I'm an h1 tag</h1>
-    <h2>I'm an h2 tag</h2>
-  </div>
-</div>; */
-}
+// Both will be similar - a JS object
+console.log(headingInCoreReact);
+console.log(headingInJSX);
 
-const element2 = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-]); // give siblings in an array
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(headingInJSX);
 
-root2.render(element2);
+// How it converts
+// React.createElement(core react) -> ReactElement(a JS object) -> HTML element (on rendering)
