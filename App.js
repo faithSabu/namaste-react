@@ -1,22 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// eg. of core react
-const headingInCoreReact = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Welcome from core react"
+const Title = () => <h1>This is Title component</h1>;
+
+// Eg. of Componet composition - ie, just combining mutliple componets (Here <Title/> component is used in another component)
+const HeaderComponent = () => (
+  <div id="container">
+    <Title /> 
+    This is Header component
+  </div>
 );
 
-// use of JSX - the same element in JSX
-const headingInJSX = <h1 id="heading">Welcome from JSX</h1>; // this code will be converted to React.createElement(core of react) by Babel
-
-// Both will be similar - a JS object
-console.log(headingInCoreReact);
-console.log(headingInJSX);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(headingInJSX);
-
-// How it converts
-// React.createElement(core react) -> ReactElement(a JS object) -> HTML element (on rendering)
+root.render(<HeaderComponent />); // use angular brackets to render a component
