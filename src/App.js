@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const App = () => {
   return (
@@ -9,5 +12,12 @@ const App = () => {
     </div>
   );
 };
+
+const appRouter = createBrowserRouter([
+  { path: "/", element: <App /> },
+  { path: "/about", element: <About /> },
+  { path: "/contact", element: <Contact /> },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+// root.render(<App />);  // this is older one
+root.render(<RouterProvider router={appRouter} />); // use "RouterProvider" and give routes to "router"
