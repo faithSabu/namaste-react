@@ -11,3 +11,11 @@
   display: flex;
   gap: 50px;
 }
+
+.user_card {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 5px;
+  border-radius: 5px;
+  width: 400px;
+}
