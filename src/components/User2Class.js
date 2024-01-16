@@ -1,13 +1,8 @@
 import React from "react";
 
-class UserClass extends React.Component {
+class User2Class extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      count: 0,
-      count2: 10,
-    };
     console.log(this.props.name + "Child constructor");
   }
 
@@ -30,4 +25,4 @@ class UserClass extends React.Component {
   }
 }
 
-export default UserClass;
+export default User2Class;
